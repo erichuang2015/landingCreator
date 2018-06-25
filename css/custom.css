@@ -1,0 +1,546 @@
+section.new-price {
+    padding: 20px 0 50px 0;
+}
+
+.row-cards {
+    padding: 30px 0 0 0;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.prices {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+.wrap-price-cart {
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.wrap-price-cart > p {
+    position: absolute;
+    left: 10px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.wrap-price-cart .dark-bg {
+    position: absolute;
+    top: -70px;
+    left: -20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 20%;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    background: #c5004f;
+}
+
+.wrap-price-cart_ip {
+    margin: 0 0 20px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.wrap-price-cart_ip > p {
+    position: absolute;
+    left: 20px;
+    font-size: 50px;
+    color: #fff;
+}
+
+
+.wrap-price-cart_ip .dark-bg {
+    position: absolute;
+    top: -70px;
+    left: -20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 20%;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    background: #507500;
+}
+
+.wrap-price-cart_ip .ooo-bg {
+    position: absolute;
+    top: -70px;
+    left: -20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 20%;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    background: #bc0000;
+}
+
+
+.new-price__cart {
+    float: right;
+
+    padding: 40px;
+
+    -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.new-price__cart .cart__title {
+
+    line-height: 30px;
+    margin: 90px 0 -50px 0px;
+
+    font-size: 2.0em;
+    color: #bc0000;
+}
+
+.new-price__cart .cart__price {
+    padding-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: left;
+}
+
+.new-price__cart .cart__price__cost {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 90px;
+    color: #444;
+}
+
+.new-price__cart .cart__price__quarter {
+    padding: 10px 0 0 10px;
+}
+
+.new-price__cart .cart__price__quarter hr {
+    height: 2px;
+    background: #999;
+    margin: 2px 0 -2px -2px;
+}
+
+.new-price__cart .cart__price__quarter p {
+    font-weight: 300;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+
+.new-price__cart .cart__price__description {
+    width: 100%;
+}
+
+.new-price__cart .cart__price__description p {
+    line-height: 1.2em;
+    margin: 10px 0 -10px 0;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 991px) {
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .wrap-price-cart > p {
+        font-size: 38px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .wrap-price-cart .cart__title {
+        font-size: 28px;
+        line-height: 30px;
+        margin: 90px 0 -60px 0px;
+    }
+    .wrap-price-cart .cart__price__cost {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .prices {
+        position: relative;
+        left: 20px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .wrap-price-cart .dark-bg {
+        left: -20px;
+    }
+}
+
+startblock {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+
+startblock first,
+startblock second,
+startblock third,
+startblock fourth,
+startblock fifth {
+    margin-right: 20px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+    -webkit-box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+    -moz-box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+    box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+}
+
+
+startblock first h4,
+startblock second h4,
+startblock third h4,
+startblock fourth h4,
+startblock fifth h4 {
+    color: darkorange;
+    font-size: 1.9em;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px 0 10px 0;
+
+}
+
+startblock first img,
+startblock second img,
+startblock third img,
+startblock fourth img,
+startblock fifth img {
+    margin-top: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+startblock first p,
+startblock second p,
+startblock third p,
+startblock fourth p,
+startblock fifth p {
+    color: darkslategrey;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0 20px 20px 20px;
+    font-size: .9em;
+    line-height: 1.2em;
+
+}
+
+decision {
+
+
+    text-align: center;
+}
+
+
+decision first.col-lg-3.col-md-3.col-sm-6.col-xs-12,
+decision second.col-lg-3.col-md-3.col-sm-6.col-xs-12,
+decision third.col-lg-3.col-md-3.col-sm-6.col-xs-12,
+decision fourth.col-lg-3.col-md-3.col-sm-6.col-xs-12,
+decision fifth {
+    min-height: 350px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+    -webkit-box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+    -moz-box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+    box-shadow: 1px 3px 34px -18px rgba(0, 0, 0, 0.94);
+}
+
+
+decision first.col-lg-3.col-md-3.col-sm-6.col-xs-12 h4,
+decision second.col-lg-3.col-md-3.col-sm-6.col-xs-12 h4,
+decision third.col-lg-3.col-md-3.col-sm-6.col-xs-12 h4,
+decision fourth.col-lg-3.col-md-3.col-sm-6.col-xs-12 h4,
+decision fifth h4 {
+    color: darkorange;
+    font-size: 1.9em;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px 0 10px 0;
+
+}
+
+decision first.col-lg-3.col-md-3.col-sm-6.col-xs-12 img,
+decision second.col-lg-3.col-md-3.col-sm-6.col-xs-12 img,
+decision third.col-lg-3.col-md-3.col-sm-6.col-xs-12 img,
+decision fourth.col-lg-3.col-md-3.col-sm-6.col-xs-12 img,
+decision fifth img {
+    margin-top: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+decision first.col-lg-3.col-md-3.col-sm-6.col-xs-12 p,
+decision second.col-lg-3.col-md-3.col-sm-6.col-xs-12 p,
+decision third.col-lg-3.col-md-3.col-sm-6.col-xs-12 p,
+decision fourth.col-lg-3.col-md-3.col-sm-6.col-xs-12 p,
+decision fifth p {
+    color: darkslategrey;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0 20px 20px 20px;
+    font-size: .9em;
+    line-height: 1.2em;
+
+}
+
+action_block {
+    margin: 0;
+}
+
+.action_block p {
+    font-size: 1.3em;
+}
+
+.action_block h3 {
+    font-size: 1.5em;
+    margin: 30px 0 10px 0;
+}
+
+div.modal-dialog {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #003459;
+    /*border-left: 1px #003459 dotted;*/
+    padding-left: 10px;
+    font-size: 1em
+}
+
+.phone-scroll {
+    display: inline-block;
+    margin-top: 10px;
+    color: #003459;
+    border-left: 1px #000 solid;
+    padding-left: 10px;
+    font-size: .8em
+}
+
+img.logo_long {
+    display: inline;
+    height: 100px;
+}
+
+img.logo_short {
+    display: inline;
+    height: 40px;
+}
+
+
+@media (max-width: 991px) {
+    .phone{    display: inherit;}
+}
+
+/*responsive*/
+
+@media (max-width:1024px) {
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    img.logo_long {
+        display: inline;
+        height: 50px;
+    }
+    img.logo_short {
+        display: inline;
+        height: 50px;
+    }
+
+}
+
+@media (min-width:1023px) and (max-width:1365px){
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+
+    }
+}
+
+@media (max-width:1366px) {
+
+    img.logo_long {
+        display: inline;
+        height: 90px;
+        margin-top: -20px;
+    }
+    img.logo_short {
+        display: inline;
+        height: 50px;
+    }
+
+}
+
+@media (max-width:520px) {
+
+}
+
+@media (max-width:768px) {
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    startblock {
+        display: grid;
+        grid: 1fr 1fr 1fr 1fr 1fr / 1fr;
+        text-align: center;
+        background: #fff;
+    }
+
+    h2 {
+        border-bottom: 2px dotted #888;
+        font-weight: 500;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 3em;
+    }
+
+    .navbar-brand {}
+
+    .navbar-brand img {
+        height: 52px;
+        display: inline;
+        /*margin: -5px 0 0 10px;*/
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .logo-long {
+        height: 60px;
+    }
+   
+    .action-img {
+        display: none;
+    }
+    .section-padding {
+        padding: 20px 0;
+    }
+    .title {
+        padding-bottom: 10px;
+    }
+    .services-pict {
+        float: left;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+    }
+    .services-cart {
+        float: left;
+        width: 50%;
+    }
+    .services-cart {
+        min-height: 250px;
+        position: relative;
+        padding: 30px;
+
+        background: #fff;
+
+        margin-bottom: 30px;
+
+    }
+
+
+
+}
+
+@media (max-width: 320px) {
+    .wrap-price-cart_ip {
+        margin: 0 0 20px 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        transition: all 1s ease-in-out;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    startblock {
+        display: grid;
+        grid: 1fr 1fr 1fr 1fr 1fr / 1fr;
+        text-align: center;
+    }
+    h2 {
+        border-bottom: 2px dotted #888;
+        font-weight: 500;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 3em;
+    }
+}

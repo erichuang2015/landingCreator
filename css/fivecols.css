@@ -1,0 +1,333 @@
+.bg-image {
+    background: url(../img/bg/decision.jpg) no-repeat center center;
+}
+
+.special-horizontal-wrapper {
+    padding: 30px 0 70px 0;
+}
+
+.special-horizontal-wrapper h3,
+.special-horizontal-wrapper h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.special-horizontal-wrapper .fivecol-block-content h4 {
+    font-size: 1.3em;
+    margin: -115px 0 80px 0;
+}
+
+.fivecol-container {}
+
+.fivecol-item {
+    padding: 10px;
+}
+
+.fivecol-item-wrapper {
+
+    background: #ffffff;
+
+
+
+}
+
+.fivecol-item-wrapper:hover {
+    background: #fff;
+
+
+}
+
+.fivecol-block-image {}
+
+.fivecol-image-in-block {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.fivecol-block-content {
+    text-align: center;
+    /*min-height: 180px;*/
+    padding: 20px 10px 5px 10px;
+}
+
+.fivecol-block-content h4 {
+    text-transform: uppercase;
+}
+
+.fivecol-block-title {
+    text-align: center
+}
+
+.fivecol-block-title h2,
+.fivecol-block-title h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 200;
+
+}
+
+.fivecol-block-title h2 {
+    font-size: 4em;
+    padding: 0 0 10px 0;
+}
+
+.fivecol-block-title h3 {
+    color: #003459;
+    font-size: 2em;
+    margin: 10px 0 30px 0;
+}
+
+div.fivecol-block-content.min140 {
+    min-height: 140px;
+}
+
+div.fivecol-block-content.min180 {
+    min-height: 180px;
+}
+
+div.fivecol-block-content.min240 {
+    min-height: 240px;
+}
+
+div.fivecol-block-content.min250 {
+    min-height: 250px;
+}
+
+div.fivecol-block-content.min260 {
+    min-height: 260px;
+}
+
+div.fivecol-block-content.min270 {
+    min-height: 270px;
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    .special-horizontal-wrapper {}
+    .fivecol-container {}
+    .fivecol-item {}
+    .fivecol-block-image {}
+    .fivecol-image-in-block {}
+    .fivecol-block-content {
+        text-align: center;
+/*        min-height: 200px;
+        padding: 20px;*/
+    }
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {
+        font-size: 1.3em;
+    }
+    .special-horizontal-wrapper .fivecol-block-content p {
+        font-size: 1.3em;
+        /*margin: -100px 0 0 0;*/
+    }
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {
+        font-size: 4em;
+    }
+    .fivecol-block-title h3 {}
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .special-horizontal-wrapper {}
+    .fivecol-container {}
+    .fivecol-item {}
+    .fivecol-block-image {}
+    .fivecol-image-in-block {}
+    .fivecol-block-content {
+        font-size: 1.4em;
+    }
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {
+        font-size: 1em;
+    }
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {}
+    .fivecol-block-title h3 {}
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .special-horizontal-wrapper {
+        background: none;
+    }
+    .fivecol-container {}
+    .fivecol-item {
+        padding: 0;
+    }
+    .fivecol-block-image {
+        overflow: hidden;
+    }
+    .fivecol-image-in-block {
+        width: 70%;
+    }
+    .fivecol-block-content {
+        text-align: center;
+        padding: 20px;
+
+        font-size: 1.0em;
+    }
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {
+        font-size: 3em;
+    }
+    .fivecol-block-content {}
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {
+        font-size: 3em;
+    }
+    .fivecol-block-title h3 {
+        font-size: 1em;
+    }
+    /* iPad in Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .special-horizontal-wrapper {}
+        .fivecol-item {
+            padding: 30px;
+        }
+        .fivecol-block-image {
+            width: 50%;
+            overflow: hidden;
+            float: left;
+        }
+
+        .fivecol-block-content {
+            padding: 20px;
+            width: 40%;
+            float: left;
+            text-align: left;
+        }
+        .fivecol-block-title {}
+        .fivecol-block-title h2 {}
+        .fivecol-block-title h3 {}
+        .special-horizontal-wrapper .fivecol-block-content h4 {
+
+            font-size: 1.6em;
+            text-align: center;
+            margin: 78px 0px 0 -600px;
+        }
+    }
+
+}
+
+/* iPad in Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+    .special-horizontal-wrapper .fivecol-block-content h4{
+        
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .special-horizontal-wrapper {
+        background: none;
+    }
+    .fivecol-container {}
+    .fivecol-item {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .fivecol-block-image {
+        width: 50%;
+        overflow: hidden;
+        float: left;
+    }
+    .fivecol-image-in-block {}
+    .fivecol-block-content {
+        text-align: left;
+        margin: 70px 0 0 -20px;
+        padding: 20px;
+        width: 47%;
+        float: left;
+        font-size: .9em;
+    }
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {
+        margin: -10px 0 5px 0;
+        font-size: 3em;
+    }
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {
+        font-size: 3em;
+    }
+    .fivecol-block-title h3 {
+        font-size: 1em;
+    }
+
+}
+
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .special-horizontal-wrapper {}
+    .fivecol-container {}
+    .fivecol-item {}
+    .fivecol-block-image {}
+    .fivecol-image-in-block {}
+    .fivecol-block-content {
+        min-height: 40px;
+    }
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {
+        font-size: 1.3em;
+        margin: -135px 0 110px 0;
+    }
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {}
+    .fivecol-block-title h3 {}
+}
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+    .special-horizontal-wrapper {}
+    .fivecol-container {}
+    .fivecol-item {}
+    .fivecol-block-image {}
+    .fivecol-block-content {}
+    .fivecol-image-in-block {}
+    .special-horizontal-wrapper h3,
+    .special-horizontal-wrapper h4 {}
+    .special-horizontal-wrapper .fivecol-block-content h4 {}
+    .fivecol-block-title {}
+    .fivecol-block-title h2 {}
+    .fivecol-block-title h3 {}
+}

@@ -1,0 +1,175 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 22, 2018, 4:47:48 PM
+    Author     : olegkholyk
+*/
+
+.header-text {
+    margin-top: -250px;
+}
+
+
+.img-hero {
+    width: 100%;
+    height: 100%;
+    background-color: #fffff4;
+
+}
+
+.overlay-header {
+    /*background-color: rgba(45, 56, 78, .7);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.centralimage {
+    height: 100%;
+    background: url(../img/bg/topper.jpg);
+    background-size: auto 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header p {
+
+}
+
+.header-text h1{}
+
+.header-text p {
+    font-size: 2.3em;
+    line-height: 1em;
+    margin-bottom: 24px;
+}
+
+header .main-bottns {
+    animation-delay: .7s;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1680px),
+only screen and (max-width : 1920px)
+{
+    .centralimage {
+        background-size: auto 110%;
+        background-position: 50% 65%;
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+    .header-text {}
+    .centralimage {}
+    .header-text h1{}
+    .header-text p{}
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+
+}
+
+@media only screen and (max-width : 1360px) and (max-height : 768px) {
+    .header-text {
+
+    }
+    .centralimage {
+        height: 100%;
+        background: url(../img/bg/topper.jpg);
+        background-size: auto 108%;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    .header-text h1{
+
+    }
+    .header-text p{
+        font-size: 2.3em;
+        line-height: 1em;
+        margin-bottom: 24px;
+
+    }
+    .img-hero {
+
+    }
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .header-text {}
+    .centralimage {}
+    .header-text h1{
+    }
+    .header-text p{}
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .header-text {}
+    .centralimage {}
+    .header-text h1{}
+    .header-text p{}
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
+
+@media only screen and (max-width : 768px) and (orientation:landscape){
+    .header-text {
+        margin-top: -150px;
+    }
+    .centralimage {}
+    .header-text h1{}
+    .header-text p{}
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .header-text {}
+    .centralimage {}
+    .header-text h1{
+        font-size: 3em;
+    }
+    .header-text p{
+        font-size: 2em;
+    }
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .header-text {}
+    .centralimage {}
+    .header-text h1{}
+    .header-text p{}
+    .img-hero {}
+    .overlay-header {}
+    header p {}
+    header .main-bottns {}
+}
