@@ -3,24 +3,20 @@
 
 array_map(function ($el) {
     return require("req/" . $el . ".php");
-}, ['class/classes', 'header', 'navbar', 'topper', 'actions', 'services_c1', 'features']);
-
-$priceblock = new Prices();
-$priceblock->createBlock();
+}, ['class/classes', 'header', 'navbar', 'topper']);
 
 
-$feedback = new FeedbackBlock();
-$feedback->makeFeedback();
 
-array_map(function ($el) {
-    return require("req/" . $el . ".php");
-}, ['stages', 'prices_1', 'decision_1']);
 
-$feedback->makeFeedback();
+buildBlocks();
+
+
+
+
 
 array_map(function ($el) {
     return require("req/" . $el . ".php");
-}, ['safety','geo', 'modal', 'footer']);
+}, ['geo', 'modal', 'footer']);
 
 
 ?>

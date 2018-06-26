@@ -18,7 +18,7 @@ if (isset($_SESSION["send"])) {
         <input required type="checkbox" value="checked" checked><label style="padding-left:10px;font-weight: normal;">Я согласен на обработку персональных данных</label>
 
         <br />
-        <input type="submit" class="green" name="send" value="<?php print_r(isset($_SESSION['tel']) ? 'Заявка отправлена! ожидайте звонка на номер: ' . $_SESSION['tel'] : $buttonName); ?>">
+        <input type="submit" class="btn btn-success btn-lg" name="send" value="<?php print_r(isset($_SESSION['tel']) ? 'Заявка отправлена! ожидайте звонка на номер: ' . $_SESSION['tel'] : $buttonName); ?>">
     </div>
     <!-- End Submit -->
 </form>
