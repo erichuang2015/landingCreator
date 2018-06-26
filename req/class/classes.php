@@ -9,7 +9,7 @@ class Header {
         require $this->config;
 
         $this->home = 'http://' . $_SERVER['SERVER_NAME'] . '/';
-        $this->subfolder = explode('/', $_SERVER['DOCUMENT_URI'])[1];
+        $this->subfolder = explode('/', $_SERVER['REQUEST_URI'])[1];
         $this->pagetitle = '<title>' . $entDetails['type'] . ' &laquo;' . $entDetails['name'] . '&raquo; | ' . $entDetails['slogan'] . ' ' . $entDetails['city'] . '.</title>';
         $this->keywords = '<meta name="keywords" content="' . $entDetails['keywords'] . '">';
     }
