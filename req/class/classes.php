@@ -10,7 +10,6 @@ class Header {
 
         $this->home = 'http://' . $_SERVER['SERVER_NAME'] . '/';
         $this->subfolder = explode('/', $_SERVER['DOCUMENT_URI'])[1];
-        $this->init = '<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
         $this->pagetitle = '<title>' . $entDetails['type'] . ' &laquo;' . $entDetails['name'] . '&raquo; | ' . $entDetails['slogan'] . ' ' . $entDetails['city'] . '.</title>';
         $this->keywords = '<meta name="keywords" content="' . $entDetails['keywords'] . '">';
     }
@@ -31,6 +30,18 @@ class Header {
         require($this->config);
         print_r($entDetails['local'] ? '<script src="js/jquery.min.js"></script>' :
                         '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>');
+    }
+
+    function init() {
+        print_r('<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">');
+    }
+    
+    function pageTitle() {
+        print_r($this->pagetitle);
+    }
+    
+    function keyWords() {
+        print_r($this->keywords);
     }
 
 }
@@ -239,6 +250,12 @@ function buildBlocks() {
         $currentClass = dispatch($block);
         $currentClass->makeSection();
     }, $blocks);
+}
+
+function renderRequired($required) {
+    array_map(function ($el) {
+        return require("req/" . $el . ".php");
+    }, $required);
 }
 
 ?>

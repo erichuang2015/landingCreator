@@ -7,7 +7,6 @@ $okMark = array_key_exists('email', $_SESSION) ? '<br /><i class="text-success f
 <section id="geo" class="contact section-padding">
         <div class="container">
             <div class="row">
-                <!-- Start Title -->
 
                 <div class="col-md-6">
                     <div>
@@ -30,4 +29,3 @@ $okMark = array_key_exists('email', $_SESSION) ? '<br /><i class="text-success f
             </div>
         </div>
     </section>
-    <!-- End Section Contact -->

@@ -1,22 +1,10 @@
 <?php
 
+require_once 'req/class/classes.php';
 
-array_map(function ($el) {
-    return require("req/" . $el . ".php");
-}, ['class/classes', 'header', 'navbar', 'topper']);
-
-
-
+renderRequired(['header', 'navbar', 'topper']);
 
 buildBlocks();
 
-
-
-
-
-array_map(function ($el) {
-    return require("req/" . $el . ".php");
-}, ['geo', 'modal', 'footer']);
-
-
+renderRequired(['geo', 'modal', 'footer']);
 ?>
