@@ -2,9 +2,7 @@
 
 require_once 'req/class/classes.php';
 
-renderRequired(['header', 'navbar', 'topper']);
-
+renderRequired(['header', 'navbar', 'topper']);   
 buildBlocks();
-
-renderRequired(['geo', 'modal', 'footer']);
+renderRequired(['geo', 'sendmail', 'modal', 'footer']);
 ?>

@@ -7,7 +7,7 @@
                 <h4 class="modal-title" id="myModalLabel">Оформить заявку</h4>
             </div>
             <div class="modal-body">
-                <?php require('__form.php'); ?>
+                <?php require'form.php'; ?>
             </div>
         </div>
     </div>

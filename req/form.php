@@ -9,7 +9,7 @@ if (isset($_SESSION["send"])) {
     $buttonName = 'Перезвоните мне!';
 }
 ?>
-<form action="__sendmail.php" method="post">
+<form action="" method="post">
     <div class="text-center">
 
         <input required type="text" name="name" placeholder="Имя Фамилия" value="<?php print_r(isset($_SESSION['name']) ? $_SESSION['name'] : ''); ?>">

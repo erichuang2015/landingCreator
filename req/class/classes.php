@@ -1,15 +1,18 @@
 <?php
 
-// Classes
-//Header class
+function getConfigPath($configName) {
+    $subfolder = explode('/', $_SERVER['REQUEST_URI'])[1];
+    $config = $_SERVER['DOCUMENT_ROOT'] . '/' . $subfolder . '/config/' . $configName . '.php';
+    return $config;
+}
+
 class Header {
 
     function __construct() {
-        $this->config = 'config/general.php';
-        require $this->config;
-
         $this->home = 'http://' . $_SERVER['SERVER_NAME'] . '/';
         $this->subfolder = explode('/', $_SERVER['REQUEST_URI'])[1];
+        $this->config = getConfigPath('general');
+        require $this->config;
         $this->pagetitle = '<title>' . $entDetails['type'] . ' &laquo;' . $entDetails['name'] . '&raquo; | ' . $entDetails['slogan'] . ' ' . $entDetails['city'] . '.</title>';
         $this->keywords = '<meta name="keywords" content="' . $entDetails['keywords'] . '">';
     }
@@ -19,7 +22,7 @@ class Header {
     }
 
     function putStyleLinks() {
-        require 'config/general.php';
+        require($this->config);
         print_r($entDetails['local'] ? '<link rel="stylesheet" href="css/bootstrap.min.css">' : $entDetails['bsV3']);
         array_map(function ($el) {
             return print_r('<link rel="stylesheet" href="' . $this->home . $this->subfolder . '/css/' . $el . '.css">');
@@ -35,11 +38,11 @@ class Header {
     function init() {
         print_r('<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">');
     }
-    
+
     function pageTitle() {
         print_r($this->pagetitle);
     }
-    
+
     function keyWords() {
         print_r($this->keywords);
     }
@@ -156,7 +159,7 @@ class SectionFive {
 class FeedbackBlock {
 
     function __construct($titleEnabled = false, $title = '') {
-        $this->config = 'config/general.php';
+        $this->config = getConfigPath('general');
         require $this->config;
         $this->title = $title;
         $this->titleEnabled = $titleEnabled;
@@ -182,7 +185,7 @@ class FeedbackBlock {
         print_r('<p>' . $this->textBlock . ' ' . $this->linkToPrivacy . '</p></div>');
 
         print_r('<div id="formblock" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">');
-        require ('__form.php');
+        require __DIR__ . '/../form.php';
         print_r('</div></div></div></section>');
     }
 
@@ -191,7 +194,7 @@ class FeedbackBlock {
 class Prices {
 
     public function __construct() {
-        require 'config/prices.php';
+        require getConfigPath('prices');
         $this->prices = $prices;
     }
 
@@ -244,7 +247,7 @@ function dispatch($section) {
 }
 
 function buildBlocks() {
-    require 'config/blocks.php';
+    require getConfigPath('blocks');
 
     array_map(function ($block) {
         $currentClass = dispatch($block);
