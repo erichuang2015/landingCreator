@@ -8,8 +8,8 @@
             <p class="animated fadeInUp"><?=$entDetails['slogan']?></p>
             
              <div class="animated fadeInUp">
-                <a class="btn btn-info btn-lg" href="#actions">акция</a>
-                <a class="btn btn-success btn-lg" href="#prices">цены на бухучет</a>
+                <a class="btn btn-info btn-lg" href="#actions">Акция</a>
+                <a class="btn btn-success btn-lg" href="#prices">Цены на бухучет</a>
             </div>
             
         </div>

@@ -34,7 +34,17 @@ $mail->Subject = 'Заказ с сайта от ' . $safeData['name'];
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 //$mail->msgHTML(file_get_contents('req/mail/template.php'), __DIR__);
-$mail->msgHTML('$userData');
+$mail->msgHTML('Заказ от ' . $safeData['name'] . ' с сайта ' . $entDetails['domain'] . '.'
+        . '<h1>Заказ на имя '
+        . $safeData['name']
+        . '</h1>'
+        . '<p>Контактный телефон: <b>'
+        . $safeData['tel']
+        . '</b><br />'
+        . '<p>Контактный e-mail: <b>'
+        . $safeData['email']
+        . '</b><br />'
+        . '<p>');
 
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
