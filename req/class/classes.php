@@ -233,12 +233,122 @@ class Prices {
 
 }
 
+class Slider {
+
+    function __construct($data) {
+        $this->data = $data;
+
+        $this->slides = array_filter($this->data, function ($arr) {
+            return gettype($arr) === 'array';
+        });
+
+        $this->duration = $data['duration'];
+        $this->anchor = $data['anchor'];
+        $this->button = $data['button'];
+    }
+
+    function getDuration() {
+        return $this->duration;
+    }
+
+    function getAnchor() {
+        return $this->anchor;
+    }
+
+    function createButton($text, $target = 'myModal', $class = 'buttonblock') {
+        return '<div class="'
+                . $class
+                . '" data-toggle="modal" data-target="#'
+                . $target
+                . '"><a class="btn btn-info">'
+                . $text
+                . '</a></div>';
+    }
+
+    function makeSlide($slideData) {
+        $active = $slideData['tag'] == 'active' ? ' active' : '';
+        $desc = array_key_exists('desc', $slideData) ? '<p>' . $slideData['desc'] . '</p>' : '';
+
+        $currentSlide = '<div class="item'
+                . $active
+                . '">'
+                . '<img src="'
+                . $slideData['img']
+                . '" alt="'
+                . $slideData['heading']
+                . '" style="width:100%;"><div class="carousel-caption"><h3>'
+                . $slideData['heading']
+                . '</h3>'
+                . $desc
+                . $this->createButton($slideData['button_txt'])
+                . '</div></div>';
+
+        return $currentSlide;
+    }
+
+    function makeSlides() {
+        $first = array_reduce($this->slides, function ($acc, $slide) {
+            $acc .= $this->makeSlide($slide);
+            return $acc;
+        }, '<div class="carousel-inner">');
+        $rest = '</div>';
+        return $first . $rest;
+    }
+
+    function makeControls() {
+        return '<a class="left carousel-control" href="#'
+                . $this->getAnchor()
+                . '" data-slide="prev">'
+                . '<span class="glyphicon glyphicon-chevron-left"></span>'
+                . '<span class="sr-only">Предыдущая</span></a>'
+                . '<a class="right carousel-control" href="#'
+                . $this->getAnchor()
+                . '" data-slide="next">'
+                . '<span class="glyphicon glyphicon-chevron-right"></span>'
+                . '<span class="sr-only">Следующая</span></a>';
+    }
+
+    function makeIndicators() {
+        $acc = '<ol class="carousel-indicators">';
+
+        for ($i = 0; $i < count($this->slides); $i += 1) {
+
+            $active = $i == 0 ? ' class="active"' : '';
+            $acc .= '<li data-target="#'
+                    . $this->getAnchor()
+                    . '" data-slide-to="'
+                    . $i
+                    . '"'
+                    . $active
+                    . '></li>';
+        }
+
+        return $acc . '</ol>';
+    }
+
+    function makeSection() {
+        $block = '<header id="home" class="img-hero"><div id="'
+                . $this->getAnchor()
+                . '" class="carousel slide" data-ride="carousel" data-interval="'
+                . $this->getDuration()
+                . '">'
+                . $this->makeIndicators()
+                . $this->makeSlides()
+                . $this->makeControls()
+                . '</div></header>';
+
+        print_r($block);
+    }
+
+}
+
 function dispatch($section) {
     $dispatcher = [
         'bs' => 'SectionBS',
         'flex' => 'SectionFive',
         'feedback' => 'FeedbackBlock',
-        'price' => 'Prices'
+        'price' => 'Prices',
+        'slider' => 'Slider'
     ];
     if (array_key_exists($section['type'], $dispatcher)) {
         $class = $dispatcher[$section['type']];

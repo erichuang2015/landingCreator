@@ -12,26 +12,39 @@ and open the template in the editor.
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     transition: all 1s ease-in-out;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+    /*box-shadow: 0 15px 15px rgba(0, 0, 0, .2);*/
     border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
 
 .ooo {
-    background: url(../img/bg/prices.jpg) top center;
+
+    background: -moz-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FDFF 49%, #D1FAFF 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(33%, #FFFFFF), color-stop(49%, #F4FDFF), color-stop(100%, #D1FAFF)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FDFF 49%, #D1FAFF 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FDFF 49%, #D1FAFF 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FDFF 49%, #D1FAFF 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, #FFFFFF 33%, #F4FDFF 49%, #D1FAFF 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D1FAFF',GradientType=1 ); /* ie6-9 */
     background-size: cover;
 }
 
 .ip {
-    background: url(../img/bg/prices.jpg) bottom center;
+    background: -moz-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FFF4 49%, #D3FFD1 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(33%, #FFFFFF), color-stop(49%, #F4FFF4), color-stop(100%, #D3FFD1)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FFF4 49%, #D3FFD1 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FFF4 49%, #D3FFD1 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #FFFFFF 33%, #F4FFF4 49%, #D3FFD1 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, #FFFFFF 33%, #F4FFF4 49%, #D3FFD1 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D3FFD1',GradientType=1 ); /* ie6-9 */
     background-size: cover;
 }
 
 .price_box {
     font-family: 'Oswald', sans-serif;
     display: block;
-    color: #bc0000;
+    color: #50a7ff;
 }
 
 .price_box .cost{
@@ -52,12 +65,12 @@ and open the template in the editor.
 
 }
 .price_box .time .period {
-    border-top: 1px dotted #bc0000;
+    border-top: 1px dotted #50a7ff;
     display: block;
     margin: 0 70px 20px 70px;
 }
 .price_box .cost span {
-    color: #bc0000;
+    color: #50a7ff;
 }
 .priceitem .description {
     font-family: 'Roboto Condensed', sans-serif;
@@ -111,12 +124,12 @@ and open the template in the editor.
     .price_box .time .period {
         display: inline-table;
         margin: 0px 0 20px 0px;
-    
-}
-.price_box .cost span {}
-.priceitem .description {}
-.priceitem .ooo-bg {}
-.priceitem .ip-bg {}
+
+    }
+    .price_box .cost span {}
+    .priceitem .description {}
+    .priceitem .ooo-bg {}
+    .priceitem .ip-bg {}
 }
 
 /* Medium Devices, Desktops */
