@@ -41,12 +41,12 @@ h3 {
 
 h2{
 
-
+    color:#245a8f;
 }
 
 
 h3 {
-    color:#5fb800;
+    color:#3783cd;
 }
 
 
@@ -73,7 +73,7 @@ h1 {
 }
 
 h2 {
-    border-bottom: 2px solid #888;
+    border-bottom: 2px solid #245a8f;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 200;
     font-size: 4em;
@@ -326,17 +326,14 @@ section#contact.contact.section-padding {
 
 .navbar-default .navbar-nav > li > a {
 
-    color:#004105;
-
+    color: #193958;
     padding: 0;
-
     text-transform: uppercase;
-
     -webkit-transition: all .5s ease-in-out;
-
     -o-transition: all .5s ease-in-out;
-
     transition: all .5s ease-in-out;
+    cursor: pointer;
+    font-size: 18px;
 
 }
 
@@ -825,7 +822,7 @@ footer h3 {
 
     }
 
-   
+
 
 }
 

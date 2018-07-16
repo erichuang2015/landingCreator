@@ -260,14 +260,30 @@ class Slider {
                 . $class
                 . '" data-toggle="modal" data-target="#'
                 . $target
-                . '"><a class="btn btn-info">'
+                . '"><a class="btn btn-success btn-lg">'
                 . $text
                 . '</a></div>';
     }
 
     function makeSlide($slideData) {
+        $month = date('n');
+        $monthsNames = [
+            'январе',
+            'феврале',
+            'марте',
+            'апреле',
+            'мае',
+            'июне',
+            'июле',
+            'августе',
+            'сентябре',
+            'октябре',
+            'ноябре',
+            'декабре'];
         $active = $slideData['tag'] == 'active' ? ' active' : '';
-        $desc = array_key_exists('desc', $slideData) ? '<p>' . $slideData['desc'] . '</p>' : '';
+        $desc = array_key_exists('desc', $slideData) ? '<p>' . '<b>Только в ' . $monthsNames[$month - 1] . '!</b> ' . $slideData['desc'] . '</p>' : 'Спеши приобрести в ' . $monthsNames[$month - 1] . '!';
+
+
 
         $currentSlide = '<div class="item'
                 . $active

@@ -48,7 +48,7 @@ $blocks = [
     [
         'type' => 'slider',
         'anchor' => 'myCarousel',
-        'duration' => 500000,
+        'duration' => 5000,
         'button' => true,
         'h2' => 'Акции компании',
         'h3' => 'Спеши приобрести в '.$monthsNames[$month-1].'!',
