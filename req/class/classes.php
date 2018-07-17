@@ -256,17 +256,32 @@ class Slider {
     }
 
     function createButton($text, $target = 'myModal', $class = 'buttonblock') {
+        $daysLeft = date('t') - date('j');
+        $pre = 'осталось';
+        
+        if ($daysLeft == 1) {
+            $ofDays = 'день';
+            $pre = 'остался';
+        } elseif ($daysLeft > 1 && $daysLeft < 5) {
+            $ofDays = 'дня';
+        } else {
+           $ofDays = 'дней'; 
+        }
+        
+               
         return '<div class="'
                 . $class
                 . '" data-toggle="modal" data-target="#'
                 . $target
                 . '"><a class="btn btn-success btn-lg">'
-                . $text
+                . $text . ' ('
+                . $pre
+                . ' ' . $daysLeft . ' ' . $ofDays.')'
                 . '</a></div>';
     }
 
     function makeSlide($slideData) {
-        $month = date('n');
+        $month = date('n');        
         $monthsNames = [
             'январе',
             'феврале',

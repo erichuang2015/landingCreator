@@ -6,6 +6,10 @@ section.new-price {
     padding: 30px 0 0 0;
 }
 
+#geo p {
+  font-size: 1.2em;
+}
+
 .clearfix:after,
 .clearfix:before {
     content: '';

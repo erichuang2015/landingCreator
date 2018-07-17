@@ -8,24 +8,24 @@ $okMark = array_key_exists('email', $_SESSION) ? '<br /><i class="text-success f
         <div class="container">
             <div class="row">
 
-                <div class="col-md-6">
+                <div class="col-md-6" id="geo">
                     <div>
                     <h2>Координаты</h2>
                     <h3 class="orange">Будем рады видеть Вас у нас в офисе:</h3>
-                        <br />
-                    <p><b><?=' &laquo;'. $entDetails['name'].'&raquo;'?></b></p>
-                    
+                        <hr>
+                    <h4><b><?=$entDetails['type'] . ' &laquo;'. $entDetails['name'].'&raquo;'?></b></h4>
+
                     <p> <i class="orange fas fa-map-marker-alt"></i><?=' г.'. $entDetails['city'].', '.$entDetails['address'].'.'?></p>
                         <p> <i class="orange fas fa-phone-square"></i><?=' '. $entDetails['phone'].'.'?></p>
                         <p> <i class="orange far fa-envelope"></i> <a href="mailto:<?=$entDetails['email'].'@'.$entDetails['domain']?>"><?=$entDetails['email'].'@'.$entDetails['domain']?></a></p>
-                        
+
                         <p class="text-success"><?= $okMark; ?></p>
-                </div>                
+                </div>
                 </div>
                 <div class="col-md-6">
                    <script type="text/javascript" charset="utf-8" async src="<?=$entDetails['map']?>"></script>
                 </div>
-                
+
             </div>
         </div>
     </section>
