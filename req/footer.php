@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="copyrights">
-                <?= '<p>&copy; ' . date('Y') . '. &laquo;' . $entDetails['name'] . '&raquo;' . '<br /> г.' . $entDetails['city'] . ', ' . $entDetails['address'] . ', тел.: ' . $entDetails['phone'] . '.<br />Все права защищены.</p>'; ?>
+                <?= '<p>&copy; ' . date('Y') . '. &laquo;' . $entDetails['name'] . '&raquo;' . '<br /> г.' . $entDetails['city'] . ', ' . $entDetails['address'] . ', тел.: ' . $entDetails['phone'][0] . '.<br />Все права защищены.</p>'; ?>
             </div>
         </div>
 </footer>
