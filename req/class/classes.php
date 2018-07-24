@@ -28,6 +28,10 @@ class Header {
             return print_r('<link rel="stylesheet" href="' . $this->home . $this->subfolder . '/css/' . $el . '.css">');
         }, $reqStyles);
     }
+    
+    function putFavicon() {
+        print_r('<link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32">');
+    }
 
     function putJQueryLink() {
         require($this->config);

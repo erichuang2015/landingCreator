@@ -6,6 +6,7 @@ $header::openSession();
         $header->keywords();
         $header->putStyleLinks(); 
         $header->putJQueryLink();
+        $header->putFavicon();
         ?> 
 
         <script src="js/bootstrap.min.js"></script>

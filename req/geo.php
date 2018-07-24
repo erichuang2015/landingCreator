@@ -16,7 +16,16 @@ $okMark = array_key_exists('email', $_SESSION) ? '<br /><i class="text-success f
                     <h4><b><?=$entDetails['type'] . ' &laquo;'. $entDetails['name'].'&raquo;'?></b></h4>
 
                     <p> <i class="orange fas fa-map-marker-alt"></i><?=' г.'. $entDetails['city'].', '.$entDetails['address'].'.'?></p>
-                        <p> <i class="orange fas fa-phone-square"></i><?=' '. $entDetails['phone'].'.'?></p>
+                    
+                       
+                        <?php 
+                        array_map(function($phone) {
+                            print_r('<p> <i class="orange fas fa-phone-square"></i> '
+                                    . $phone
+                                    . '.</p>');
+                        }, $entDetails['phone']);
+                        ?>
+                        
                         <p> <i class="orange far fa-envelope"></i> <a href="mailto:<?=$entDetails['email'].'@'.$entDetails['domain']?>"><?=$entDetails['email'].'@'.$entDetails['domain']?></a></p>
 
                         <p class="text-success"><?= $okMark; ?></p>

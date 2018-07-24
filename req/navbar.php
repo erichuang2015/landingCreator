@@ -15,7 +15,7 @@ $sentMark = array_key_exists('email', $_SESSION) ? '<a href="#" class="text-succ
                 <div class="bar3"></div>
             </div>
             <a class="navbar-brand" href="<?= $home; ?>">
-                <img src="img/logo/logo-string.svg"><phone><i class="fas fa-phone-square"></i> <?=$entDetails['phone']?></phone>
+                <img src="img/logo/logo-string.svg"><phone><i class="fas fa-phone-square"></i> <?=$entDetails['phone'][0]?></phone>
             </a>
         </div>
 
