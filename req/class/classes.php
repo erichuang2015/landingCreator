@@ -197,20 +197,31 @@ class FeedbackBlock {
 
 class Prices {
 
-    public function __construct() {
+    public function __construct($blockType = 'cells') {
         require getConfigPath('prices');
-        $this->prices = $prices;
+        $this->prices = array_filter($prices, function ($arr) {
+            return array_key_exists('price', $arr);
+        });
+        
+        $this->blockType = $blockType;
+        
+        $this->companyType = $prices['companyType'];
+        $this->serviceType = $prices['serviceType'];
+        
     }
 
     function makePriceItem($data) {
-        $type = $data['type'] == 'ooo' ? 'ООО' : 'ИП';
+        
+        $type = $this->companyType[$data['typeOfCompany']];
+        $service = $this->serviceType[$data['typeOfService']];
+        
         print_r('<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">'
-                . '<div class="priceitem clearfix ' . $data['type'] . '">'
+                . '<div class="priceitem clearfix ' . $type['class'] . '">'
                 . '<div class="service_title">'
-                . $data['name'] . '<br />для &laquo' . $type . '&raquo;</div>'
+                . $service['name'] . '<br />для &laquo' . $type['name'] . '&raquo;</div>'
                 . '<div class="price_box">'
                 . '<div class="cost"><span class="from">от</span> ' . number_format($data['price'], 0, ',', ' ') . ' &#8381;</div>'
-                . '<div class="time"><div class="period">' . $data['period'] . '</div></div></div>'
+                . '<div class="time"><div class="period">' . $service['period'] . '</div></div></div>'
                 . '<div class="description">' . $data['descr'] . '</div>'
                 . '<div class="buttonblock animated fadeInUp" data-toggle="modal" data-target="#myModal">'
                 . '<a class="btn btn-success btn-lg">Заказать</a>'
