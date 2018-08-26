@@ -1,6 +1,12 @@
 <?php
 
+// 'cells' means that block will displayed in tiles mode
+// 'ajax' displays same block using interactive AJAX 
+
 $prices = [
+    'blockType' => ['cells'],
+    'heading' => ['h2' => 'Цены', 'h3' => 'Бухгалтерский учёт и аудит для ООО и ИП'],
+    'background' => ['img/bg/pattern.jpg'],
     'companyType' => [
         1 => ['name' =>'ООО', 'class' => 'ooo'],
         2 => ['name' =>'ИП', 'class' => 'ip']

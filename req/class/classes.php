@@ -28,7 +28,7 @@ class Header {
             return print_r('<link rel="stylesheet" href="' . $this->home . $this->subfolder . '/css/' . $el . '.css">');
         }, $reqStyles);
     }
-    
+
     function putFavicon() {
         print_r('<link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32">');
     }
@@ -197,24 +197,56 @@ class FeedbackBlock {
 
 class Prices {
 
-    public function __construct($blockType = 'cells') {
+    public function __construct() {
         require getConfigPath('prices');
         $this->prices = array_filter($prices, function ($arr) {
             return array_key_exists('price', $arr);
         });
-        
-        $this->blockType = $blockType;
-        
+
+        $this->blockType = $prices['blockType'][0];
+        $this->background = $prices['background'][0];
+        $this->heading = $prices['heading'];
+
         $this->companyType = $prices['companyType'];
         $this->serviceType = $prices['serviceType'];
-        
+    }
+
+    function makeCellsBlock() {
+        print_r('<section id="prices" class="new-price" style="background: url(' . $this->background . ') no-repeat center center;">'
+                . '<div class="container">'
+                . '<div class="row">'
+                . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
+                . '<div class="title"><h2>' . $this->heading['h2'] . '</h2><h3 class="orange">' . $this->heading['h3'] . '</h3></div></div></div>'
+                . '<div class="row row-cards">');
+
+        for ($counter = 0; $counter < count($this->prices); $counter += 1) {
+            $this->makePriceItem($this->prices[$counter]);
+            if ($counter == 2) {
+                print_r('</div><div class="row row-cards">');
+            }
+        }
+
+        print_r('</div></div></section>');
+    }
+
+    function makeAJAXBlock() {
+        print_r('<section id="prices" class="new-price" style="background: url(' . $this->background . ') no-repeat center center;">'
+                . '<div class="container">'
+                . '<div class="row">'
+                . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
+                . '<div class="title"><h2>' . $this->heading['h2'] . '</h2><h3 class="orange">' . $this->heading['h3'] . '</h3></div></div></div>'
+                . '<div class="row row-cards">');
+        //render block here
+        //
+        //render block here
+        print_r('</div></div></section>');
     }
 
     function makePriceItem($data) {
-        
+
         $type = $this->companyType[$data['typeOfCompany']];
         $service = $this->serviceType[$data['typeOfService']];
-        
+
         print_r('<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">'
                 . '<div class="priceitem clearfix ' . $type['class'] . '">'
                 . '<div class="service_title">'
@@ -229,21 +261,14 @@ class Prices {
     }
 
     function makeSection() {
-        print_r('<section id="prices" class="new-price">'
-                . '<div class="container">'
-                . '<div class="row">'
-                . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
-                . '<div class="title"><h2>Цены</h2><h3 class="orange">Бухгалтерский учёт и аудит для ООО и ИП</h3></div></div></div>'
-                . '<div class="row row-cards">');
-
-        for ($counter = 0; $counter < count($this->prices); $counter += 1) {
-            $this->makePriceItem($this->prices[$counter]);
-            if ($counter == 2) {
-                print_r('</div><div class="row row-cards">');
-            }
+        $dispatch = [
+            'cells' => 'makeCellsBlock',
+            'ajax' => 'makeAJAXBlock'
+        ];
+        if (array_key_exists($this->blockType, $dispatch)) {
+            $callableFunc = $dispatch[$this->blockType];
         }
-
-        print_r('</div></div></section>');
+        return $this->$callableFunc();
     }
 
 }
@@ -273,17 +298,17 @@ class Slider {
     function createButton($text, $target = 'myModal', $class = 'buttonblock') {
         $daysLeft = date('t') - date('j');
         $pre = 'осталось';
-        
+
         if ($daysLeft == 1) {
             $ofDays = 'день';
             $pre = 'остался';
         } elseif ($daysLeft > 1 && $daysLeft < 5) {
             $ofDays = 'дня';
         } else {
-           $ofDays = 'дней'; 
+            $ofDays = 'дней';
         }
-        
-               
+
+
         return '<div class="'
                 . $class
                 . '" data-toggle="modal" data-target="#'
@@ -291,12 +316,12 @@ class Slider {
                 . '"><a class="btn btn-success btn-lg">'
                 . $text . ' ('
                 . $pre
-                . ' ' . $daysLeft . ' ' . $ofDays.')'
+                . ' ' . $daysLeft . ' ' . $ofDays . ')'
                 . '</a></div>';
     }
 
     function makeSlide($slideData) {
-        $month = date('n');        
+        $month = date('n');
         $monthsNames = [
             'январе',
             'феврале',
