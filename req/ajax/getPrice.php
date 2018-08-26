@@ -21,8 +21,7 @@ function makePriceItem($data) {
     $type = $prices['companyType'][$_GET['ct']];
     $service = $prices['serviceType'][$_GET['st']];
 
-    print_r('<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">'
-            . '<div class="priceitem clearfix ' . $type['class'] . '">'
+    print_r('<div class="priceitem clearfix ' . $type['class'] . '">'
             . '<div class="service_title">'
             . $service['name'] . '<br />для &laquo' . $type['name'] . '&raquo;</div>'
             . '<div class="price_box">'
@@ -31,7 +30,7 @@ function makePriceItem($data) {
             . '<div class="description">' . $data['descr'] . '</div>'
             . '<div class="buttonblock animated fadeInUp" data-toggle="modal" data-target="#myModal">'
             . '<a class="btn btn-success btn-lg">Заказать</a>'
-            . '</div></div></div>');
+            . '</div></div>');
 }
 
 function renderAnswer($arr) {

@@ -1,20 +1,28 @@
 <?php
 
-// 'cells' means that block will displayed in tiles mode
-// 'ajax' displays same block using interactive AJAX 
+// 'cells'     - means that block will displayed in tiles mode
+// 'ajax'      - displays same block using interactive AJAX 
+// 'collapse'  - http://getbootstrap.ru/docs/v4-alpha/components/collapse/
 
 $prices = [
-    'blockType' => ['cells'],
-    'heading' => ['h2' => 'Цены', 'h3' => 'Бухгалтерский учёт и аудит для ООО и ИП'],
-    'background' => ['img/bg/pattern.jpg'],
+    'blockType' => ['ajax'],
+    'heading' => [
+        'h2' => 'Цены',
+        'h3' => 'Бухгалтерский учёт и аудит<br>для ООО и ИП',
+        'descr' => 'Наша компания предоставляет широкий спектр бухгалтерских услуг. Мы работаем с любыми видами предприятий, работающими с любыми видами товаров и услуг. Мы всегда предлагаем нашим клиентам только высокое качество обслуживания, сохраняя приемлемые цены на обслуживание.'],
+    'background' => ['img/bg/__pattern.jpg'],
     'companyType' => [
-        1 => ['name' =>'ООО', 'class' => 'ooo'],
-        2 => ['name' =>'ИП', 'class' => 'ip']
+        1 => ['name' => 'ООО', 'class' => 'ooo', 'fullname' => 'Общество с ограниченной ответственностью'],
+        2 => ['name' => 'ИП', 'class' => 'ip', 'fullname' => 'Индивидуальный предприниматель']
     ],
     'serviceType' => [
         1 => ['name' => 'Нулевая отчетность', 'period' => 'квартал'],
         2 => ['name' => 'Подготовка отчётности', 'period' => 'квартал'],
         3 => ['name' => 'Бухгалтерское сопровождение', 'period' => 'месяц']
+    ],
+    'selectors' => [
+        'companyType' => ['h3' => '1. Тип собственности', 'description' => 'Выберите подходящий для вашей компании тип собственности', 'img' => ''],
+        'serviceType' => ['h3' => '2. Вид обслуживания', 'description' => 'Выберите желаемый вид бухгалтерских услуг для вашей компании', 'img' => '']
     ],
     [
         'typeOfCompany' => 1,

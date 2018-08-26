@@ -206,6 +206,7 @@ class Prices {
         $this->blockType = $prices['blockType'][0];
         $this->background = $prices['background'][0];
         $this->heading = $prices['heading'];
+        $this->selectors = $prices['selectors'];
 
         $this->companyType = $prices['companyType'];
         $this->serviceType = $prices['serviceType'];
@@ -234,10 +235,47 @@ class Prices {
                 . '<div class="container">'
                 . '<div class="row">'
                 . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
-                . '<div class="title"><h2>' . $this->heading['h2'] . '</h2><h3 class="orange">' . $this->heading['h3'] . '</h3></div></div></div>'
+               // . '<div class="title"><h2>' . $this->heading['h2'] . '</h2><h3 class="orange">' . $this->heading['h3'] . '</h3></div></div></div>'
                 . '<div class="row row-cards">');
-        //render block here
-        //
+        //render block here 
+        
+        
+        
+        print_r('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding: 25px;"><h2><i class="fas fa-calculator text-sm"></i> ' . $this->heading['h2'] . '</h2><h3 class="orange">' . $this->heading['h3'] . '</h3>&nbsp;<p>' . $this->heading['descr'] . '</p></div>');
+        print_r('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding: 25px;">');
+        
+        //company selector
+        print_r('<h3>'.$this->selectors['companyType']['h3'].'</h3><p>'.$this->selectors['companyType']['description'].'</p><br />');
+        print_r('<div class="form-group">'
+                //. '<label for="sel1">Select list:</label>'
+                . '<select class="form-control" id="'
+                . 'ct'
+                . '" onchange="getPriceIfCompany(this.value)">');
+        array_map(function($key) {
+            print_r ('<option value="'.$key.'">'.$this->companyType[$key]['fullname'].'</option>');
+        }, array_keys($this->companyType));
+        
+        print_r('</select></div>&nbsp;&nbsp;');
+        
+        
+        //service selector
+        print_r('<h3>'.$this->selectors['serviceType']['h3'].'</h3><p>'.$this->selectors['serviceType']['description'].'</p><br />');
+        print_r('<div class="form-group">'
+                //. '<label for="sel1">Select list:</label>'
+                . '<select class="form-control" id="'
+                . 'st'
+                . '" onchange="getPriceIfService(this.value)">');
+        array_map(function($key) {
+            print_r ('<option value="'.$key.'">'.$this->serviceType[$key]['name'].'</option>');
+        }, array_keys($this->serviceType));
+        
+        print_r('</select></div>');
+        print_r('</div>');
+        
+        //result block
+        
+        print_r('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="result">test</div>');
+        
         //render block here
         print_r('</div></div></section>');
     }
