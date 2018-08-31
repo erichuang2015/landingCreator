@@ -334,24 +334,25 @@ class Slider {
     }
 
     function createButton($text, $target = 'myModal', $class = 'buttonblock') {
-        $daysLeft = date('t') - date('j');
+        $daysleftinMonth = date('t') - date('j');
+        //$daysleftinMonth = 15;
+        $daysLeft = ($daysleftinMonth == 0) ? 'последний' : $daysleftinMonth;
         $pre = 'осталось';
 
-        if ($daysLeft == 1) {
+        if ($daysLeft == 1 || $daysLeft == 0 || $daysLeft == 21 || $daysLeft == 31) {
             $ofDays = 'день';
             $pre = 'остался';
-        } elseif ($daysLeft > 1 && $daysLeft < 5) {
+        } elseif ($daysLeft > 1 && $daysLeft < 5 || $daysLeft > 21 && $daysLeft < 25) {
             $ofDays = 'дня';
         } else {
             $ofDays = 'дней';
         }
 
-
         return '<div class="'
                 . $class
                 . '" data-toggle="modal" data-target="#'
                 . $target
-                . '"><a class="btn btn-success btn-lg">'
+                . '"><a class="btn btn-warning btn-lg">'
                 . $text . ' ('
                 . $pre
                 . ' ' . $daysLeft . ' ' . $ofDays . ')'

@@ -16,6 +16,7 @@ $safeData = filter_input_array(INPUT_POST, [
     "name" => FILTER_SANITIZE_STRING,
     "email" => FILTER_SANITIZE_EMAIL
         ]);
+
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
@@ -26,7 +27,7 @@ $mail->setFrom('no-reply@' . $entDetails['domain'], 'Заказ звонка с 
 $mail->addReplyTo('abuse@' . $entDetails['domain'], 'Заказ звонка с сайта');
 
 //Set who the message is to be sent to
-$mail->addAddress($entDetails['email'] . '@' . $entDetails['domain'], 'Admin');
+$mail->addAddress($entDetails['sendTo'], 'Admin');
 
 //Set the subject line
 $mail->Subject = 'Заказ с сайта от ' . $safeData['name'];

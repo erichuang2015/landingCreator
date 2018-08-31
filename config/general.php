@@ -6,6 +6,7 @@ $entDetails = [
     'bsV4'      => '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">',
     'email'     => 'oleg',
     'domain'    => 'kholyk.ru',
+    'sendTo'    => 'meole@yandex.ru',   
     'type'      => 'ООО',
     'name'      => 'Рога и копыта',
     'slogan'    => 'Центр бухгалтерского обслуживания ООО и ИП',
