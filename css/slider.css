@@ -2,42 +2,48 @@
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
 .carousel-indicators li {
-    margin:0 10px;
-    border:3px solid #bc0000;
-    width: 20px;
-    height: 20px;
-    border-radius: 80px;
+    border:3px solid #fff;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
 }
 
 .carousel-indicators .active {
-    background:#bc0000;
-    margin:0 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 80px;
+    background:#fff;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
 
 }
 
 .carousel-caption {
-    text-align: left;
+padding: 10px;
+margin: 0 0 150px 0;
+background: rgba(30,30,30,.7);
+border-radius: 15px;
+border:1px dashed #fff;
+/*    text-align: left;
     position: absolute;
     top: 331px;
     left: 370px;
-    width: 614px;
+    width: 614px;*/
 }
 
 
 .carousel-caption h3{
     font-size: 2.4em;
-    color:#000;
-    margin-bottom: 10px;
+    color:#fff;
+    margin: 15px auto;
+
+    /*margin-bottom: 10px;*/
 }
 
 .carousel-caption p{
-    font-size: 1.1em;
-    color: #000;
-    margin-bottom: 20px;
-    text-shadow: none;
+  font-size: 1.1em;
+  color: #fff;
+  margin: 10px auto;
+  text-shadow: none;
+  width: 60%;
 }
 
 a.right.carousel-control,
@@ -69,22 +75,19 @@ a.left.carousel-control {
     }
 
     .carousel-caption {
-        text-align: left;
-        position: absolute;
-        top: 200px;
-        left: 120px;
-        width: 900px;
+
+
     }
 
 
     .carousel-caption h3{
         font-size: 1.7em;
-        color:#000;
+
     }
 
     .carousel-caption p{
         font-size: 1.0em;
-        color: #000;
+
         text-shadow: none;
     }
 
@@ -115,17 +118,13 @@ a.left.carousel-control {
     }
 
     .carousel-caption {
-        text-align: left;
-        position: absolute;
-        top:40%;
-        left:21%;
-        width: 30%;
+
     }
 
 
     .carousel-caption h3{
         font-size: 1.7em;
-        color:#000;
+
     }
 
     .carousel-caption p{
@@ -138,7 +137,20 @@ a.left.carousel-control {
     }
 
 }
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+padding: 0;
+margin: 0 0 30px 0;
+  }
 
+  .carousel-caption p {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 10px auto;
+    text-shadow: none;
+
+}
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     .carousel-indicators li {
@@ -159,24 +171,24 @@ a.left.carousel-control {
     }
 
     .carousel-caption {
-        text-align: left;
-        position: absolute;
-        top: 100px;
-        left: 70px;
-        width: 300px;
+left:80px;
+right:80px;
+    margin: 0 0 0px 0;
+
     }
 
 
     .carousel-caption h3{
         font-size: 1.7em;
-        color:#000;
+
+        margin: 10px auto;
+
     }
 
     .carousel-caption p{
         font-size: 1.0em;
-        color: #000;
         text-shadow: none;
-        width: 300px;
+
     }
 
     a.right.carousel-control,
@@ -186,7 +198,7 @@ a.left.carousel-control {
 
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     .carousel-indicators li {
         margin:0 10px;
@@ -208,18 +220,13 @@ a.left.carousel-control {
     }
 
     .carousel-caption {
-        text-align: left;
-        position: absolute;
-        top:50px;
-        left:64px;
-        width: 100%;
+    display: none;
+
     }
 
 
     .carousel-caption h3{
-        font-size: 1em;
-        color:#000;
-        text-shadow:none;
+    display: none;
     }
 
     .carousel-caption p{
@@ -236,43 +243,28 @@ a.left.carousel-control {
 
 }
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
     .carousel-indicators li {
-        margin:0 10px;
-        border:3px solid #bc0000;
-        width: 25px;
-        height: 25px;
-        border-radius: 80px;
+    display: none;
     }
 
     .carousel-indicators .active {
-        background:#bc0000;
-        margin:0 10px;
-        width: 25px;
-        height: 25px;
-        border-radius: 80px;
-
+    display: none;
     }
 
     .carousel-caption {
-        text-align: left;
-        position: absolute;
-        top:40%;
-        left:21%;
-        width: 30%;
+    display: none;
     }
 
 
     .carousel-caption h3{
-        font-size: 2.7em;
-        color:#000;
+    display: none;
+
     }
 
     .carousel-caption p{
-        font-size: 1.3em;
-        color: #000;
-        text-shadow: none;
+    display: none;
     }
 
     a.right.carousel-control,

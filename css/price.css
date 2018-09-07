@@ -1,0 +1,355 @@
+#prices h2 {
+  color : #fff;
+  border-bottom: 1px dashed #fff;
+}
+
+#prices h3 {
+  color : #fffccc;
+}
+
+#prices h3.orange {
+  color : #fffaa2;
+}
+
+#prices p {
+  color : #fff;
+}
+
+#result .priceitem {
+  border        : 1px dashed #fff;
+  border-radius : 15px;
+  font-family   : 'Roboto Condensed',
+                  sans-serif;
+}
+
+#result .ooo {
+  color      : #0f4003;
+  background : rgba(215, 255, 109, .6);
+}
+
+#result .ip {
+  color      : #004463;
+  background : rgba(109, 209, 255, .6);
+}
+
+#result .priceitem .service_title {
+  margin      : 30px 0 20px 0;
+  text-align  : center;
+  font-family : 'Oswald',
+                sans-serif;
+  font-size   : 2em;
+  line-height : 1.2em;
+}
+
+#result .priceitem .price_box {}
+
+#result .priceitem .price_box .cost {
+  text-align  : center;
+  font-family : 'Oswald',
+                sans-serif;
+  font-size   : 4em;
+  font-weight : 200;
+}
+
+#result .priceitem .price_box .time {
+  display         : flex;
+  justify-content : center;
+}
+
+#result .priceitem .price_box .period {
+  padding    : 0 90px;
+  border-top : 1px #000 dashed;
+}
+
+#result .priceitem .description {
+  margin     : 20px 0 0 0;
+  text-align : center;
+}
+
+#result .priceitem .buttonblock {}
+
+@media
+  only screen
+  and (max-width : 1200px) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {
+    margin    : 15px 0 10px 0;
+    font-size : 1.8em;
+  }
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {
+    width  : 80%;
+    margin : 15px auto;
+  }
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (max-width : 992px) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {}
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {}
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (max-width   : 768px)
+  and (orientation : portrait) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {}
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {}
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation      : portrait) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {
+    margin : 20px 0 5px 0;
+  }
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {
+    width  : 50%;
+    margin : 0 auto;
+  }
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation      : andscape) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {}
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {}
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (max-width   : 768px)
+  and (orientation : andscape) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {}
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {}
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (max-width : 480px) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {
+    margin    : 10px 0 0 0;
+    font-size : 1.4em;
+  }
+
+  #result .priceitem .price_box {
+    margin    : 15px 0 0 0;
+    font-size : 1.3em;
+  }
+
+  #result .priceitem .price_box .cost {
+    font-size   : 3em;
+    line-height : 1.1em;
+  }
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {
+    margin      : 5px 0 0 0;
+    font-size   : 1em;
+    line-height : 1.4em;
+  }
+
+  #result .priceitem .buttonblock {}
+}
+
+@media
+  only screen
+  and (max-width : 320px) {
+  #prices h2 {}
+
+  #prices h3 {}
+
+  #prices h3.orange {}
+
+  #prices p {}
+
+  #result .priceitem {}
+
+  #result .ooo {}
+
+  #result .ip {}
+
+  #result .priceitem .service_title {}
+
+  #result .priceitem .price_box {}
+
+  #result .priceitem .price_box .cost {}
+
+  #result .priceitem .price_box .time {}
+
+  #result .priceitem .price_box .period {}
+
+  #result .priceitem .description {}
+
+  #result .priceitem .buttonblock {}
+}

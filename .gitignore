@@ -1,7 +1,4 @@
 .DS_Store
 *.ai
-*.jpg
-*.svg
-*.png
 *.psd
 /nbproject/private/

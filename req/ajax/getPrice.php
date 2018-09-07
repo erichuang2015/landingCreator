@@ -1,7 +1,10 @@
+
+
+
 <?php
 
 require '../class/classes.php';
-require getConfigPath('prices');
+require '../../config/prices.php';
 
 
 $onlyPrices = array_filter($prices, function ($arr) {
@@ -17,7 +20,7 @@ $filtered = array_filter($onlyPrices, 'isInCondition');
 
 
 function makePriceItem($data) {
-    require getConfigPath('prices');
+    require '../../config/prices.php';
     $type = $prices['companyType'][$_GET['ct']];
     $service = $prices['serviceType'][$_GET['st']];
 
