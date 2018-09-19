@@ -13,5 +13,7 @@
             </div>
         </div>
 </footer>
+
+<script src="js/termmodal.js"></script>
 </body>
 </html>

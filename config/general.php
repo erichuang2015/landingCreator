@@ -24,4 +24,4 @@ $entDetails = [
     'confLink'  => ['privacy.html', 'Политике конфиденциальности']
 ];
 
-$reqStyles = ['animate', 'styles', 'fontawesome-all.min', 'custom', 'services', 'price', 'flex', 'slider', 'forms','bootstrap-dropdownhover.min'];
+$reqStyles = ['animate', 'styles', 'fontawesome-all.min', 'custom', 'services', 'price', 'flex', 'slider', 'forms','bootstrap-dropdownhover.min', 'terms_modal'];

@@ -15,7 +15,7 @@ if (isset($_SESSION["send"])) {
         <input required type="text" name="name" placeholder="Имя Фамилия" value="<?php print_r(isset($_SESSION['name']) ? $_SESSION['name'] : ''); ?>">
         <input required type="email" name="email" placeholder="E-mail" value="<?php print_r(isset($_SESSION['email']) ? $_SESSION['email'] : ''); ?>">
         <input required type="text" name="tel" placeholder="Мобильный телефон" value="<?php print_r(isset($_SESSION['tel']) ? $_SESSION['tel'] : ''); ?>"><br />
-        <input required type="checkbox" value="checked" checked><label style="padding-left:10px;font-weight: normal;">Я согласен на обработку персональных данных</label>
+        <input required type="checkbox" value="checked" checked><label style="padding-left:10px;font-weight: normal;">Я согласен на <span id="ter" style="text-decoration: underline;" onclick="engageModal()">обработку персональных данных</span></label>
 
         <br />
         <input type="submit" class="btn btn-success btn-lg" name="send" value="<?php print_r(isset($_SESSION['tel']) ? 'Заявка отправлена! ожидайте звонка на номер: ' . $_SESSION['tel'] : $buttonName); ?>">

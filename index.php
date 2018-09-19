@@ -6,5 +6,5 @@ renderRequired(['header', 'navbar',
     //'topper'
     ]);   
 buildBlocks();
-renderRequired(['geo', 'sendmail', 'modal', 'footer']);
+renderRequired(['geo', 'sendmail', 'modal', 'modal_terms', 'footer']);
 ?>
