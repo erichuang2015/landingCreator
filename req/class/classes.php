@@ -12,7 +12,9 @@ class Header {
         $this->home = 'http://' . $_SERVER['SERVER_NAME'] . '/';
         $this->subfolder = explode('/', $_SERVER['REQUEST_URI'])[1];
         $this->config = getConfigPath('general');
+        $this->techConfig = getConfigPath('tech');
         require $this->config;
+        //require $this->techConfig;
         $this->pagetitle = '<title>' . $entDetails['type'] . ' &laquo;' . $entDetails['name'] . '&raquo; | ' . $entDetails['slogan'] . ' ' . $entDetails['city'] . '.</title>';
         $this->keywords = '<meta name="keywords" content="' . $entDetails['keywords'] . '">';
     }
@@ -22,11 +24,11 @@ class Header {
     }
 
     function putStyleLinks() {
-        require($this->config);
-        print_r($entDetails['local'] ? '<link rel="stylesheet" href="css/bootstrap.min.css">' : $entDetails['bsV3']);
+        require $this->techConfig;
+        print_r($techData['local'] ? '<link rel="stylesheet" href="css/bootstrap.min.css">' : $techData['bsV3']);
         array_map(function ($el) {
             return print_r('<link rel="stylesheet" href="' . $this->home . $this->subfolder . '/css/' . $el . '.css">');
-        }, $reqStyles);
+        }, $techData['reqStyles']);
     }
 
     function putFavicon() {
@@ -34,8 +36,8 @@ class Header {
     }
 
     function putJQueryLink() {
-        require($this->config);
-        print_r($entDetails['local'] ? '<script src="js/jquery.min.js"></script>' :
+        require $this->techConfig;
+        print_r($techData['local'] ? '<script src="js/jquery.min.js"></script>' :
                         '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>');
     }
 
@@ -170,7 +172,7 @@ class FeedbackBlock {
         $this->displayMark = array_key_exists('email', $_SESSION) ? 'style="display:none;"' : 'style="background: url(img/bg/pattern.jpg) no-repeat center top;"';
         $this->companyName = $entDetails['type'] . ' &laquo;' . $entDetails['name'] . '&raquo;';
         $this->textBlock = $entDetails['confText'];
-        $this->linkToPrivacy = '<a href="' . $entDetails['confLink'][0] . '">' . $entDetails['confLink'][1] . '</a>';
+        $this->linkToPrivacy = '<a href="#" onclick="engageModal();">' . $entDetails['confLink'][1] . '</a>';
     }
 
     function makeSection() {

@@ -51,7 +51,7 @@ $blocks = [
         'duration' => 5000,
         'button' => true,
         'h2' => 'Акции компании',
-        'h3' => 'Спеши приобрести в '.$monthsNames[$month-1].'!',
+        'h3' => 'Спеши приобрести в ' . $monthsNames[$month-1] . '!',
         'bg' => '',
         [
             'tag' => 'active',
@@ -183,7 +183,7 @@ $blocks = [
         ]
     ],
     
-    //06. Цены
+    //06. Feedback form
     [
         'type' => 'feedback',
     ],
